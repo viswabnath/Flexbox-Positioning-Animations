@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Cart</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+        integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body class="basket">
+    <header>
+        <h1>SHOPIYEE</h1>
+        <div class="icon"> 
+            <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/basket.png" alt=""> </div> 
+    </header>
+    <ul class="products">
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-1.jpg">
+              <h2>Green T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-2.jpg">
+              <h2>Yellow T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-3.jpg">
+              <h2>Pink T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-1.jpg">
+              <h2>Green T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-2.jpg">
+              <h2>Yellow T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/iamshaunjp/css-animations-playlist/master/web-examples/img/t-3.jpg">
+              <h2>Pink T-Shirt</h2>
+              <button>Add to Basket</button>
+            </li>
+          </ul>
+        <script>
+        $("button").on("click", function(){
+            $(this).closest("li").find("img").clone().addClass("zoom").appendTo("body");
+            setTimeout(function(){
+                $(".zoom").remove();
+            }, 1000);
+        });
+        </script>
+
+</body>
+
+
+<style>
+
+body{ background:#fff;}
+header{
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+header:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.basket ul{
+  padding: 0;
+  margin-top: 40px;
+}
+.basket li{
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  margin: 30px 1.5%;
+  text-align: center;
+}
+.basket button{
+  border-radius: 10px;
+  cursor: pointer;
+}
+.basket header div{
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+.basket header h1{
+  float: left;
+}
+button {
+  padding:10px;
+  border:0;
+  color:#fff;
+  background:#333;
+  margin-left:-5px;
+  border-radius: 0 10px 10px 0;
+  border:1px solid #333;
+  font-size:18px;
+  }
+
+  /* Animation Styles */
+
+  .zoom{
+      position: absolute;
+      top: 40px;
+      right: 50%;
+      width: 40px;
+      opacity: 0;
+      animation: zoom 1s ease forwards;
+
+  }
+
+  @keyframes zoom {
+      0%{opacity: o;}
+      50%{ opacity: 1;}
+      100%{opacity: 0; right: 40px;}
+  }
+</style>
+</html>
