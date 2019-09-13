@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Menu</title>
+</head>
+<body>
+    <div class="wrapper">
+  
+        <nav>
+         <ul>
+          <li><a href=""> Home </a></li>
+          <li><a href=""> About</a></li>
+          <li><a href=""> Store</a></li>
+          <li><a href=""> Contact</a></li>
+        </ul>
+        </nav>
+       
+      </div>
+</body>
+</html>
+
+<style>
+    body {
+        background: #eee;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    nav {
+        background: #333;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        /*   background:#777; */
+    }
+
+    nav a:hover {
+        background: #555;
+    }
+
+    @media screen and (min-width:768px) {
+
+        nav ul {
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        nav li {
+            flex: 1;
+        }
+
+
+    }
+</style>

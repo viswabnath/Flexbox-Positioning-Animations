@@ -1,0 +1,58 @@
+body {
+    background: #eee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    flex-flow: row;
+    /* acts on main axis */
+    justify-content:flex-start;
+    /* acts on cross axis */
+    align-items:flex-end;
+    height: 600px;
+    
+}
+
+
+.box {
+    width: 100px;
+    height:20px;
+    flex: 0 0 100px;
+    /* flex-grow min-width */
+    /* min-width:100px; */
+    /* flex-shrink width */
+    /* width: 320px; */
+    /* flex-wrap min-width */
+    /* min-width: 100px; */
+    
+
+}
+
+.one {
+    background: red;
+    /* flex-grow:4;  */
+    /* flex-shrink:5; */
+
+}
+
+.two {
+    background: blue;
+    /* flex-grow: 5; */
+    /* flex-shrink:2; */
+
+}
+
+.three {
+    background: green;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+
+}
